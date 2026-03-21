@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Color Palette - Mindful Scholar (Warm Light) */
+  --bg-color: #f7f6f2; /* Main app background */
+  --surface-color: #ffffff; /* White cards */
+  --surface-alt: #f4f2ea; /* Beige/grey cards, e.g. recent announcements or faculty status */
+  
+  --sidebar-bg: #fdfdfc; 
+  --sidebar-hover: #f1f2e9; /* Active sidebar item background */
+  
+  /* Accent Colors */
+  --primary-color: #5b6c41; /* Dark Olive green for buttons, icons */
+  --primary-light: #e6edd8; /* Light sage green for hero card background */
+  --primary-hover: #4a5933; /* Darker olive for button hover */
+  
+  --alert-color: #cf6252; /* Muted red/coral for actions/badges */
+  --alert-light: #f7d5cf;
+  
+  --dark-accent: #6a6258; /* Mocha/brown for the study space card */
+  
+  /* Text Colors */
+  --text-primary: #2d2c2a; /* Near black */
+  --text-secondary: #6e6b66; /* Medium grey */
+  --text-muted: #9c9893; /* Lighter grey */
+  
+  /* Borders */
+  --border-color: #e8e6e1;
+  
+  /* Layout */
+  --sidebar-width: 240px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+  transition: all 0.2s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 10px;
+}
