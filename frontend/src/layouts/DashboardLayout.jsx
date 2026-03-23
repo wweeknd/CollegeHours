@@ -17,6 +17,17 @@ export default function DashboardLayout() {
     navigate('/login');
   };
 
+  const getGreeting = () => {
+    const hour = new Date().getHours();
+    if (hour < 12) return 'Good Morning';
+    if (hour < 18) return 'Good Afternoon';
+    return 'Good Evening';
+  };
+
+  const todayStr = new Date().toLocaleDateString('en-US', { 
+    weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' 
+  });
+
   const NavItem = ({ to, icon, label }) => (
     <NavLink 
       to={to} 
@@ -63,8 +74,8 @@ export default function DashboardLayout() {
       <main className="main-wrapper">
         <header className="top-header">
           <div className="header-titles">
-            <h1 className="greeting">Good Morning, {user?.name?.split(' ')[0]}.</h1>
-            <div className="subtitle">Monday, October 14th &bull; 4 items require your attention.</div>
+            <h1 className="greeting">{getGreeting()}, {user?.name?.split(' ')[0] || 'Guest'}.</h1>
+            <div className="subtitle">{todayStr} &bull; Here's what's happening today. ({user?.role || 'Student'})</div>
           </div>
           <div className="header-actions">
             <button className="icon-btn">
